@@ -214,7 +214,7 @@ function TreeNode({ node, checkedIds, onToggleCheck, onAddItem, onRenameItem, on
               side="bottom" 
               align="start" 
               sideOffset={5} 
-              className="p-1 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg shadow-xl flex gap-1 w-auto min-w-[100px]"
+              className="p-1 bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg shadow-xl flex flex-row gap-1 w-auto min-w-[100px]"
               onClick={(e) => e.stopPropagation()}
             >
               {availableIcons.map((bi) => {
@@ -420,13 +420,13 @@ export default function FileTree({ initialData = [], onSelectionChange }) {
     <TreeContext.Provider value={contextValue}>
       <div 
         ref={containerRef} 
-        className="w-[640px] h-fit p-3 bg-white dark:bg-zinc-950 flex flex-col relative z-10"
+        className="w-[640px] h-fitbg-white dark:bg-zinc-950 flex flex-col relative z-10"
       >
         <div className="flex items-center justify-between pb-2 mb-2 border-b border-zinc-100 dark:border-zinc-900 relative z-20">
-          <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Lista pakowania</span>
+          <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Your luggage</span>
           <button onClick={handleCreateRootFolder} type="button" className="flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 px-2 py-1 hover:bg-blue-50 dark:hover:bg-blue-950/40 rounded-md transition-colors">
             <Plus size={14} />
-            <span>Dodaj Bagaż</span>
+            <span>New luggage</span>
           </button>
         </div>
         

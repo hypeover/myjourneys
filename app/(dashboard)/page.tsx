@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import Link from 'next/link'
+import ModernMap from '@/components/map'
 
 const Page = () => {
   return (
     <div>
-      <Link href="/packing"><Button>backpack</Button></Link>
+      <Link href="/luggage"><Button>backpack</Button></Link>
+      <ModernMap />
     </div>
   )
 }

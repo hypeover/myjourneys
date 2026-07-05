@@ -1,5 +1,9 @@
 import React from "react";
 import FileTree from "@/components/ui/packing-tree"; // Dopasuj ścieżkę do swojego folderu components
+import { Button } from "@/components/ui/button";
+import { ChevronLeft } from 'lucide-react'
+import Link from 'next/link'
+
 
 const myPackingData = [
   {
@@ -50,11 +54,20 @@ const myPackingData = [
 
 const Packing = () => {
   return <main className="flex justify-center p-10">
-    <h1></h1>
-    <FileTree initialData={myPackingData} /></main>;
+    <div className="flex flex-col">
+      <Link href='/'>
+        <Button variant='secondary' className="h-auto cursor-pointer self-start w-auto py-2 mb-3">
+          <ChevronLeft className="p-0" data-icon="inline-start" />Back to dashboard</Button>
+      </Link>
+      <h1 className="text-3xl mb-3 font-semibold">Luggage manager</h1>
+      <p className="text-muted-foreground mb-4">Don't just log your trips—get ready for them. Create customized virtual bags, <br /> add your travel essentials, and check them off as you pack your real luggage.</p>
+      <FileTree initialData={myPackingData} />
+    </div>
+  </main>;
 };
 
 export default Packing;
 
 
 //border border-zinc-200 dark:border-zinc-800 shadow-sm - styl do file tree
+//usuniete dodawac do pamieci przegladarki aby moc to pozniej przyrworcic kocham madzie
